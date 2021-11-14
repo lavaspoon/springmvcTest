@@ -74,4 +74,11 @@ public class RequestParamController {
         log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());
         return "OK";
     }
+
+    @ResponseBody
+    @RequestMapping("/calculate/saveData")
+    public String calculateModel(@ModelAttribute HelloData sendData) {
+        log.info("username={}, age={}", sendData.getUsername(), sendData.getAge());
+        return "success";
+    }
 }
